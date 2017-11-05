@@ -172,6 +172,8 @@ class Simple_Fieldset {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'check_font_awesome', 99999 );
+		$this->loader->add_shortcode( 'simplefieldset', $plugin_public, 'simplefieldset_func' );
 
 	}
 

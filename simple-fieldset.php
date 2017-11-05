@@ -13,9 +13,9 @@
  * @package           Simple_Fieldset
  *
  * @wordpress-plugin
- * Plugin Name:       Simple Fieldset
+ * Plugin Name:       Simple Fieldset with Font Awesome Icons
  * Plugin URI:        https://github.com/reneecampanilla/simple-fieldset
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       This is a simple Wordpress plugin that renders fieldsets with Font Awesome icons in the legend section.
  * Version:           1.0.0
  * Author:            Renee Campanilla
  * Author URI:        www.reneecampanilla.com

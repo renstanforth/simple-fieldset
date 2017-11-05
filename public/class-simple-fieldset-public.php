@@ -100,4 +100,33 @@ class Simple_Fieldset_Public {
 
 	}
 
+	/**
+	 * Checks Wordpress project if Font Awesome exists
+	 *
+	 * @since    1.0.0
+	 */
+	public function check_font_awesome() {
+	  global $wp_styles;
+	  $srcs = array_map('basename', (array) wp_list_pluck($wp_styles->registered, 'src') );
+	  if ( in_array('font-awesome.css', $srcs) || in_array('font-awesome.min.css', $srcs)  ) {
+	    //font awesome already exists
+	  } else {
+	    wp_enqueue_style('font-awesome', plugin_dir_url( __FILE__ ) . 'css/font-awesome.css' );
+	  }
+	}
+
+	/**
+	 * Renders simple fieldset with Font Awesome icon
+	 *
+	 * @since    1.0.0
+	 */
+	public function simplefieldset_func($atts = [], $content = null) {
+		$fieldset = '<fieldset class="simplefieldset"><legend><i class="fa ';
+		$fieldset .= isset($atts['fa'])?$atts['fa']:'fa-font-awesome';
+		$fieldset .= '" aria-hidden="true"></i> ';
+		$fieldset .= isset($atts['title'])?$atts['title']:'';
+		$fieldset .= '</legend>' . $content . '</fieldset>';
+		return $fieldset ;
+	}
+
 }

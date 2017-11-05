@@ -2,3 +2,20 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+
+.simplefieldset {
+	border: 1px solid #ddd !important;
+	margin: 0 0 25px 0;
+	xmin-width: 0;
+	padding: 10px;       
+	position: relative;
+	padding-left: 10px!important;
+}
+
+.simplefieldset legend {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 0px; 
+	width: auto;
+	padding: 5px 10px 5px 10px;
+}
